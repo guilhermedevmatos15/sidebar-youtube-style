@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+:root {
+   --cor01: #ed1b1b;
+
+   --font-padrao: 'Bebas Neue', cursive;
+}
+
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+body {
+   width: 100%;
+   min-height: 100vh;
+   background: linear-gradient(45deg, #23b893, #3fc2d6);
+   font-family: Arial, Helvetica, sans-serif
+}
+body > p.lorem {
+   margin-top: 50px;
+   padding: 10px;
+}
+
+.side-bar {
+   width: 50%;
+   max-width: 300px;
+   height: calc(100vh - 44.01px);
+   padding: 10px;
+   background-color: rgb(0, 76, 64);
+   color: white;
+   border-top-right-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+.side-bar .infos {
+   margin-top: 20px;
+}
+.side-bar .infos ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+.side-bar .infos ul button {
+   padding: 10px 20px;
+   border: none;
+   background-color: #23b893;
+   border-radius: 20px;
+   font-weight: 600;
+   color: white;
+   cursor: pointer;
+   transition: .3s;
+}
+.side-bar .infos ul button:hover {
+   background-color: #3fc2d6;
+
+}
+.side-bar .infos ul li {
+   width: 80%;
+   padding: 5px;
+   text-align: center;
+   border-bottom: 1px solid white;
+}
+.side-bar .infos ul li:last-child {
+   margin-bottom: 20px;
+}
+.side-bar .infos ul li a {
+   width: 100%;
+   text-align: center;
+   color: white;
+   text-decoration: none;
+}
+.side-bar > p {
+   font-size: 0.9rem;
+   text-align: center;
+   margin-bottom: 30px;
+}
+.side-bar > .redes-sociais {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.side-bar > .redes-sociais .icons {
+   width: 42px;
+   height: 42px;
+   padding: 10px;
+   background: linear-gradient(45deg, #23b893, #3fc2d6);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.side-bar > .redes-sociais .icons i {
+   font-size: 1.5em;
+   cursor: pointer;
+}
+.side-bar > .redes-sociais .icons:hover i {
+   color: rgb(62, 117, 100);
+}
+
+
+
+/* Manipulation JS */
+.side-bar {
+   position: fixed;
+   z-index: 3;
+   left: -100%;
+   transition: .5s;
+}
+.side-bar.show {
+   position: fixed;
+   z-index: 3;
+   bottom: 0;
+   left: 0;
+   transition: .5s;
+}
+body > i.fa-solid {
+   display: none;
+}
+body > i.fa-solid.active {
+   display: block;
+   width: 100%;
+   text-align: left;
+   position: fixed;
+   top: 0;
+   background-color: rgba(0, 0, 0, 0.796);
+   font-size: 1.5em;
+   padding: 10px;
+   cursor: pointer;
+   color: rgb(255, 255, 255);
+}
+
+
+@media (max-width: 420px) {
+   .side-bar {
+      width: 60%;
+      max-width: 300px;
+   }
+}
