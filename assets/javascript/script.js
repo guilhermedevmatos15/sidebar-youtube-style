@@ -21,4 +21,4 @@ pLorem.addEventListener('click', ()=>{
       iconClose.classList.remove('active');
       sideBar.classList.remove('show');
    }
-});
+})

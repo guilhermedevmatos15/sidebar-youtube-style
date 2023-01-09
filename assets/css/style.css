@@ -17,7 +17,7 @@ body {
    background: linear-gradient(45deg, #23b893, #3fc2d6);
    font-family: Arial, Helvetica, sans-serif
 }
-body > main > p.lorem {
+body > p.lorem {
    margin-top: 50px;
    padding: 10px;
 }
@@ -116,10 +116,10 @@ body > main > p.lorem {
    left: 0;
    transition: .5s;
 }
-header i.fa-solid {
+body > i.fa-solid {
    display: none;
 }
-header i.fa-solid.active {
+body > i.fa-solid.active {
    display: block;
    width: 100%;
    text-align: left;
